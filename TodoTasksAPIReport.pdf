@@ -1,0 +1,47 @@
+Todo Tasks API Report
+
+Overview
+This is a small todo API built using Python and Flask. It has two endpoints:
+
+GET /tasks: Returns all the current tasks.
+
+POST /tasks: Adds a new task with a description.
+The tasks are saved in memory only. There is no database. The API runs locally using python app.py.
+
+How I Tested It
+I tested it using:
+
+curl in the terminal for sending requests
+
+A browser to check the JSON output
+
+A Python script to add 100 tasks automatically
+
+The time command and curl -w to check speed
+
+top to see how much CPU and RAM it uses
+
+Optional: I used ApacheBench (ab) to test with many requests
+
+What I Saw
+The API worked fast and did not crash.
+Each request took around 0.01–0.03 seconds.
+CPU and memory stayed low, even after 1000 requests.
+The app handled the load without any problems.
+I could view the tasks in the browser, and new tasks were added correctly.
+
+What I Would Improve Later
+If I want to handle more users in the future, I would:
+
+Add a real database like SQLite or PostgreSQL
+
+Use FastAPI or async Flask for better speed
+
+Add Redis cache for faster reads
+
+Deploy the app with Gunicorn instead of Flask’s built-in server
+
+Use Docker for easier deployment
+
+Conclusion
+This API is simple but works well. It’s a good start for learning REST APIs with Python.
